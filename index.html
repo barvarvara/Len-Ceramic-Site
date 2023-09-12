@@ -2,9 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <title>Гончарная студия ЛЁН</title>
 </head>
+
 <body>
+
+<header class="container-header">
+    <div class="logo">
+        <a href="/">
+            <img class="logo__img" src="img/logo/len_ceramic2_02.png" alt="Лого Гончарная Студия Лен">
+        </a>
+    </div>
+
+    <nav>
+        <ul class="header__navigation">
+            <li class="header__dropdown">
+                <a href="#" class="header__nav-link header__nav-link_dropdown">
+                    Услуги
+                </a>
+
+                <div class="header__dropdown-container">
+                    <ul class="header__dropdown-menu" data-visible="false">
+                        <li><a href="#"> Занятия и мастер-классы </a></li>
+                        <li><a href="#"> Сертификаты </a></li>
+                        <li><a href="#"> Магазин гончарки </a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li><a href="#about"  class="header__nav-link"> О нас </a></li>
+            <li><a href="#contacts" class="header__nav-link"> Контакты </a></li>
+
+        </ul>
+    </nav>
+
+    <div class="header__btns">
+        <div class="header__user">
+            <a href="/">
+                <img class="header__user-icon" src="img/icons/user-svg/user-minimalizm.svg" alt="">
+            </a>
+        </div>
+<!--        <button class="header__nav-toggle-btn" aria-controls="header__navigation" aria-expanded="false"></button>-->
+    </div>
+
+</header>
 
 </body>
 </html>
