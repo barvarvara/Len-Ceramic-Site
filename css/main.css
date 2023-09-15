@@ -155,7 +155,7 @@ header {
     background: linear-gradient(rgba(0, 0, 0, 0), rgb(87, 71, 58)), url("../img/products/home.png");
     background-size: cover;
     background-position: center;
-    height: calc(100vh - (80px + 24px));
+    /*height: calc(100vh - (80px + 24px));*/
 
     color: var(--color-bg);
     display: flex;
