@@ -1,0 +1,96 @@
+@media (max-width: 1400px) {
+
+}
+
+@media (max-width: 1300px) {
+    .about__quote-author span {
+        display: block;
+    }
+}
+
+@media (max-width: 1200px) {
+    .link {
+        font-size: 1.5rem;
+    }
+
+    .about__quote {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .container, .container-header, .container-footer {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__description {
+        text-align: left;
+        align-self: start;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+          "img"
+          "quote"
+          "link";
+    }
+
+    .about__photo {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: span 1;
+    }
+
+    .about__quote {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .about__quote-author span {
+        display: inline-block;
+    }
+
+    .about__link {
+        justify-self: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero__title {
+        font-size: 64px;
+        text-align: center;
+        align-self: center;
+    }
+
+    .hero__description {
+        text-align: center;
+        align-self: center;
+        max-width: 100vw;
+    }
+
+    .about__quote {
+        font-size: 1.3rem;
+    }
+
+    .invitation {
+        font-size: 48px;
+    }
+
+    .invitation__address a {
+        display: block;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column;
+        row-gap: 32px;
+    }
+}
