@@ -6,12 +6,12 @@
 
 @font-face {
     font-family: Raleway;
-    src: url("../fonts/raleway/Raleway-VariableFont_wght.ttf") format("truetype");
+    src: url("../../../fonts/raleway/Raleway-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
     font-family: Ardeco;
-    src: url("../fonts/ardeco/Ardeco.ttf") format("truetype");
+    src: url("../../../fonts/ardeco/Ardeco.ttf") format("truetype");
 }
 
 :root {
@@ -71,7 +71,7 @@ header {
 
     background: var(--color-logo);
 
-    -webkit-mask-image: url("../img/logo/len_ceramic2_02.png");
+    -webkit-mask-image: url("../../../img/logo/len_ceramic2_02.png");
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
 }
@@ -82,11 +82,14 @@ header {
     list-style: none;
 }
 
+.header__nav li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
 .header__nav-link {
     text-decoration: none;
     color: var(--color-text-main);
-    margin-left: 1rem;
-    margin-right: 1rem;
     white-space: nowrap;
 }
 
@@ -98,7 +101,7 @@ header {
     background: var(--color-text-main);
     width: 16px;
     height: 12px;
-    -webkit-mask-image: url("../img/icons/arrows/list-arrow.svg");
+    -webkit-mask-image: url("../../../img/icons/arrows/list-arrow.svg");
     -webkit-mask-repeat: no-repeat;
 }
 
@@ -141,7 +144,7 @@ header {
     background: var(--color-text-main);
     background-size: 40px 40px;
 
-    -webkit-mask-image: url("../img/icons/user-svg/user-minimalizm.svg");
+    -webkit-mask-image: url("../../../img/icons/user-svg/user-minimalizm.svg");
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
 }
@@ -152,7 +155,7 @@ header {
 /*hero section*/
 
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(87, 71, 58)), url("../img/products/home.png");
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(87, 71, 58)), url("../../../img/products/home.png");
     background-size: cover;
     background-position: center;
     /*height: calc(100vh - (80px + 24px));*/
@@ -225,7 +228,7 @@ header {
 }
 
 .link:hover {
-    background-color: #8cbbcd9e;
+    background-color: #5f7e8f91;
 }
 
 .about__link {
@@ -235,7 +238,7 @@ header {
 
 
 .invitation {
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(87, 71, 58)), url("../img/products/home.png");
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(87, 71, 58)), url("../../../img/products/home.png");
     background-size: cover;
     background-position: bottom;
     color: var(--color-bg);
