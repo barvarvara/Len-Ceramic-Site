@@ -173,7 +173,8 @@
 
     .invitation {
         font-size: 32px;
-        padding: 64px;
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 
     .invitation__address {

@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    --color-bg: rgb(236, 232, 228);
+    --color-bg-lighter: #f6f3ef;
+    --color-bg-opacity: rgba(236, 232, 228, 0.74);
+    --color-logo: #bdab9f;
+    --color-text-main: #655952;
+    --color-text-secondary: #80654e;
+    --color-text-main-dark: #383227;
+    --color-bg-dark: #2a271e;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: var(--color-text-main);
+    background-color: var(--color-bg);
+    max-width: 1620px;
+    margin: 0 auto;
+}
+
+.login-container {
+    text-align: center;
+    white-space: normal;
+    display: flex;
+    justify-content: center;
+}
+
+
+.login {
+    margin: 64px 32px;
+    padding: 16px 32px;
+    max-width: 400px;
+
+    border: 2px solid var(--color-logo);
+    border-radius: 50px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+
+.logo {
+    display: block;
+    width: 144px;
+    height: 144px;
+    content: "";
+    align-self: center;
+
+    background: var(--color-logo);
+
+    -webkit-mask-image: url("../../../img/logo/len_ceramic2_02.png");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+}
+
+button {
+    padding: 8px 64px;
+    margin-top: 32px;
+    outline: none;
+    background-color: transparent;
+
+    border: var(--color-logo) solid 1px;
+    border-radius: 16px;
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 18px;
+    color: var(--color-text-main);
+}
+
+button:hover {
+    background: var(--color-logo);
+}
+
+.login__input {
+    border: var(--color-logo) solid 1px;
+    margin-top: 16px;
+}
+
+.login__input input {
+    background-color: transparent;
+    color: var(--color-text-main);
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 20px;
+    width: 100%;
+}
+
+.help-link {
+    align-self: center;
+}
+
+.help-link a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-logo);
+}
+
+.help-link a + a {
+    margin-left: 16px;
+}
+
