@@ -15,13 +15,18 @@
 }
 
 :root {
-    --color-bg: #ece8e4;
+    --color-bg: rgb(236, 232, 228);
     --color-bg-lighter: #f6f3ef;
+    --color-bg-opacity: rgba(236, 232, 228, 0.74);
     --color-logo: #bdab9f;
     --color-text-main: #655952;
     --color-text-secondary: #80654e;
     --color-text-main-dark: #383227;
     --color-bg-dark: #2a271e;
+    --color-bg-teal: rgba(48, 133, 163, 0.37);
+    --color-bg-text-teal: #3085A3FF;
+
+    --padding-container: 128px;
 }
 
 body {
@@ -33,13 +38,13 @@ body {
 }
 
 .container, .container-header, .container-footer {
-    padding-left: 128px;
-    padding-right: 128px;
+    padding-left: var(--padding-container);
+    padding-right: var(--padding-container);
 }
 
 .container {
-    padding-top: 128px;
-    padding-bottom: 128px;
+    padding-top: var(--padding-container);
+    padding-bottom: var(--padding-container);
 }
 
 .container-header {
@@ -150,15 +155,13 @@ header {
 }
 
 
-
-
 /*hero section*/
 
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0), rgb(87, 71, 58)), url("../../../img/products/home.png");
     background-size: cover;
     background-position: center;
-    /*height: calc(100vh - (80px + 24px));*/
+    height: calc(100vh - (80px + 24px));
 
     color: var(--color-bg);
     display: flex;
@@ -220,7 +223,7 @@ header {
 
 .link {
     display: inline-block;
-    color: var(--color-text-secondary);
+    color: var(--color-text-main);
     text-decoration: none;
     font-size: 1.8rem;
     padding: 16px;
@@ -228,7 +231,8 @@ header {
 }
 
 .link:hover {
-    background-color: #5f7e8f91;
+    /*background-color: #5f7e8f91;*/
+    background-color: var(--color-bg-teal);
 }
 
 .about__link {
@@ -268,6 +272,105 @@ header {
     margin-top: 96px;
     border-radius: 30px;
 }
+
+
+/*services*/
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 16px;
+    background-color: var(--color-bg-lighter);
+}
+
+.services__card {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.services__card img {
+    position: relative;
+    max-width: none;
+    min-height: 100%;
+    width: calc(100% + 30px);
+    opacity: 0.85;
+
+    transform: translate3d(-30px, 0, 0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+.services__card figcaption {
+    text-align: left;
+    color: var(--color-text-main);
+}
+
+.services__card p {
+    margin-top: 16px;
+}
+
+.services__card figcaption::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(top, rgba(72, 76, 97, 0) 0%, var(--color-bg-opacity) 75%);
+    background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, var(--color-bg-opacity) 75%);
+    content: '';
+    opacity: 0;
+}
+
+
+.services__card figcaption > div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+    width: 100%;
+    height: 50%;
+}
+
+.services__card h2,
+.services__card p {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+    /*background-color: var(--color-bg-trans);*/
+}
+
+.services__card h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.services__card p {
+    font-size: 0.9rem;
+
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+    transition: opacity 0.2s, transform 0.35s;
+}
+
+.services__card a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    opacity: 0;
+    font-size: 0;
+}
+
+.services__card:hover img,
+.services__card:hover h2,
+.services__card:hover p,
+.services__card:hover figcaption::before {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.35s;
+}
+
 
 /*footer*/
 footer {
