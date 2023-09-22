@@ -134,7 +134,7 @@ header {
 }
 
 .header__dropdown-menu li + li {
-    padding-top: 8px;
+    padding-top: 16px;
 }
 
 .header__dropdown-menu a:hover {
