@@ -1,0 +1,83 @@
+@import url("../../pages/main/css/main.css");
+@import url("../../pages/main/css/media.css");
+
+h1 {
+    font-size: 58px;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 64px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 100;
+    margin-bottom: 48px;
+}
+
+.container {
+    padding: 64px 128px;
+}
+
+.container-title {
+    padding-left: 128px;
+    padding-right: 128px;
+}
+
+.kids {
+    background-color: var(--color-bg-lighter);
+}
+
+.kids .card:hover {
+    background-color: var(--color-bg);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+.card {
+    position: relative;
+    flex-grow: 1;
+    max-width: 46%;
+    border: 1px solid var(--color-logo);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    border-radius: 50px 50px 0 0;
+    opacity: 0.85;
+}
+
+.card__text-content {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    font-weight: 200;
+}
+
+.card:hover {
+    background-color: var(--color-bg-lighter);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card h4 {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.card .link {
+    font-size: 1rem;
+    border: solid 1px var(--color-logo);
+}
+
+.card .link:hover {
+    background-color: var(--color-text-main-op);
+    color: var(--color-bg)
+}

@@ -17,9 +17,10 @@
 :root {
     --color-bg: rgb(236, 232, 228);
     --color-bg-lighter: #f6f3ef;
-    --color-bg-opacity: rgba(236, 232, 228, 0.74);
+    --color-bg-op: rgba(236, 232, 228, 0.74);
     --color-logo: #bdab9f;
     --color-text-main: #655952;
+    --color-text-main-op: rgba(101, 89, 82, 0.7);
     --color-text-secondary: #80654e;
     --color-text-main-dark: #383227;
     --color-bg-dark: #2a271e;
@@ -76,9 +77,9 @@ header {
 
     background: var(--color-logo);
 
-    -webkit-mask-image: url("../../../img/logo/len_ceramic2_02.png");
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
+    mask-image: url("../../../img/logo/len_ceramic2_02.png");
+    mask-repeat: no-repeat;
+    mask-size: contain;
 }
 
 .header__nav {
@@ -106,8 +107,8 @@ header {
     background: var(--color-text-main);
     width: 16px;
     height: 12px;
-    -webkit-mask-image: url("../../../img/icons/arrows/list-arrow.svg");
-    -webkit-mask-repeat: no-repeat;
+    mask-image: url("../../../img/icons/arrows/list-arrow.svg");
+    mask-repeat: no-repeat;
 }
 
 .header__dropdown-container {
@@ -149,9 +150,9 @@ header {
     background: var(--color-text-main);
     background-size: 40px 40px;
 
-    -webkit-mask-image: url("../../../img/icons/user-svg/user-minimalizm.svg");
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
+    mask-image: url("../../../img/icons/user-svg/user-minimalizm.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
 }
 
 
@@ -180,7 +181,7 @@ header {
     align-self: end;
     max-width: calc(100vw / 2);
     text-align: right;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 /*about section*/
@@ -197,7 +198,7 @@ header {
 }
 
 .about__quote {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     align-self: center;
 }
 
@@ -214,7 +215,6 @@ header {
 
 .about__photo {
     max-width: 100%;
-    /*scale: 80%;*/
     grid-row-start: 1;
     grid-row-end: span 2;
     grid-column-start: 2;
@@ -226,12 +226,15 @@ header {
     color: var(--color-text-main);
     text-decoration: none;
     font-size: 1.8rem;
-    padding: 16px;
+    padding: 16px 64px;
+
     border: 1px solid;
+    border-radius: 50px;
+
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 .link:hover {
-    /*background-color: #5f7e8f91;*/
     background-color: var(--color-bg-teal);
 }
 
@@ -270,7 +273,6 @@ header {
 .invitation__link {
     color: var(--color-bg);
     margin-top: 96px;
-    border-radius: 30px;
 }
 
 
@@ -297,7 +299,6 @@ header {
     opacity: 0.85;
 
     transform: translate3d(-30px, 0, 0);
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
 }
 
@@ -316,8 +317,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: -webkit-linear-gradient(top, rgba(72, 76, 97, 0) 0%, var(--color-bg-opacity) 75%);
-    background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, var(--color-bg-opacity) 75%);
+    background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, var(--color-bg-op) 75%);
     content: '';
     opacity: 0;
 }
@@ -336,7 +336,6 @@ header {
 .services__card p {
     opacity: 0;
     transform: translate3d(0, 40px, 0);
-    /*background-color: var(--color-bg-trans);*/
 }
 
 .services__card h2 {
@@ -346,8 +345,6 @@ header {
 
 .services__card p {
     font-size: 0.9rem;
-
-    -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
     transition: opacity 0.2s, transform 0.35s;
 }
 
